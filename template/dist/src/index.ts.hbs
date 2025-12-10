@@ -1,0 +1,22 @@
+import {
+  Plugin,
+  registerPlugin,
+  findComponent,
+  patchComponent,
+} from "snail-plugin-api";
+
+class MyPlugin implements Plugin {
+  name = "Snail Plugin Manager";
+  description = "A plugin manager for Snail. ";
+  version = "1.0.0";
+
+  start() {
+    console.log("Hi snail!");
+  }
+
+  stop() {
+    console.log("Bye snail!");
+  }
+}
+
+registerPlugin(new MyPlugin());
